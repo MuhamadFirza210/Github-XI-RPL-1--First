@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Project</title>
+    <title>Tugas</title>
     <style>
       label{
         display: block;
@@ -10,9 +10,9 @@
   </head>
   <body>
     <form method="post">
-      <label>Program 1</label>
+      <label>Soal 2 Bagian A</label>
       <input type="number" name="satu">
-      <input type="submit" name="kesatu" value="OK">
+      <input type="submit" name="kesatu" value="ENTER">
       <?php
       if(isset($_POST['kesatu'])){
         $angka = $_POST['satu'];
@@ -31,29 +31,35 @@
       }
       ?>
       
-      <label>Program 2</label>
+      <label>Soal 2 Bagian B</label>
       <input type="number" name="dua">
-      <input type="submit" name="kedua" value="OK">
+      <input type="submit" name="kedua" value="ENTER">
       <?php
       if(isset($_POST['kedua'])){
         $angka = $_POST['dua'];
         
         echo "<br>";
-        for($x = $angka; $x >= 1; $x--){
-          for($y = $angka; $y > $x; $y--){
-            echo "&nbsp";
-          }
-          for($z = 1; $z <= $x; $z++){
-            echo "$z ";
-          }
-          echo "<br>";
-        }
+       $a = $angka;
+       while($a >= 1) {
+         $b = $angka;
+         while ($b > $a) {
+           echo "&nbsp";
+           $b--;
+         }
+         $c = 1;
+         while ($c <= $a){
+           echo "$c";
+           $c++;
+         }
+         $a--;
+         echo "<br>";
+       }
       }
       ?>
       
-      <label>Program 3</label>
+      <label>Soal 3</label>
       <input type="number" name="tiga">
-      <input type="submit" name="ketiga" value="OK">
+      <input type="submit" name="ketiga" value="ENTER">
       <?php
       if(isset($_POST['ketiga'])){
         $angka = $_POST['tiga'];
